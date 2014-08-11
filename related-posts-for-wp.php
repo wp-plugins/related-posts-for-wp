@@ -1,10 +1,9 @@
 <?php
-
 /*
 	Plugin Name: Related Posts for WordPress
 	Plugin URI: http://www.barrykooij.com/
 	Description: Related Posts for WordPress, related posts that perform!
-	Version: 1.0.0
+	Version: 1.1.0
 	Author: Barry Kooij
 	Author URI: http://www.barrykooij.com/
 	License: GPL v3
@@ -24,6 +23,30 @@
 */
 
 class RP4WP {
+
+	private static $instance = null;
+
+	const VERSION = '1.1.0';
+
+	/**
+	 * @var RP4WP_Settings
+	 */
+	public $settings = null;
+
+	/**
+	 * Singleton get method
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 *
+	 * @return RP4WP
+	 */
+	public static function get() {
+		if(null == self::$instance) {
+			self::$instance = new self();
+		}
+		return self::$instance;
+	}
 
 	/**
 	 * Get the plugin file
@@ -64,7 +87,7 @@ class RP4WP {
 	/**
 	 * The constructor
 	 */
-	public function __construct() {
+	private function __construct() {
 		$this->init();
 	}
 
@@ -87,6 +110,11 @@ class RP4WP {
 			exit;
 		}
 
+		// Setup settings
+		if ( is_admin() ) {
+			$this->settings = new RP4WP_Settings();
+		}
+
 		// Filters
 		$manager_filter = new RP4WP_Manager_Filter( plugin_dir_path( __FILE__ ) . 'classes/filters/' );
 		$manager_filter->load_filters();
@@ -98,8 +126,12 @@ class RP4WP {
 
 }
 
+function RP4WP() {
+	return RP4WP::get();
+}
+
 function __rp4wp_main() {
-	new RP4WP();
+	RP4WP();
 }
 
 // Create object - Plugin init
