@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+	exit;
+} // Exit if accessed directly
+
 class RP4WP_Related_Post_Manager {
 
 	/**
@@ -67,7 +71,7 @@ class RP4WP_Related_Post_Manager {
 			'post_status'    => 'publish',
 			'meta_query'     => array(
 				array(
-					'key'     => RP4WP_Constants::PM_AUTO_LINKED,
+					'key'     => RP4WP_Constants::PM_POST_AUTO_LINKED,
 					'compare' => 'NOT EXISTS',
 					'value'   => ''
 				),
@@ -95,7 +99,7 @@ class RP4WP_Related_Post_Manager {
 			}
 		}
 
-		update_post_meta( $post_id, RP4WP_Constants::PM_AUTO_LINKED, 1);
+		update_post_meta( $post_id, RP4WP_Constants::PM_POST_AUTO_LINKED, 1 );
 
 		return true;
 	}
