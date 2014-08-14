@@ -89,3 +89,6 @@ There is one custom table created for the post cache, this table will however no
 
 = 1.0.0 : August 7, 2014 =
 * Initial version
+
+== Upgrade Notice ==
+This version is safe to upgrade.
