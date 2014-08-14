@@ -4,7 +4,7 @@ Donate link: http://www.barrykooij.com/
 Tags: related posts for wordpress, related posts for wp, simple related posts, easy related posts, related posts, related, relations, internal links, seo
 Requires at least: 3.6
 Tested up to: 3.9.2
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,8 +28,7 @@ After installing the plugin you will be taking to a wizard that will analyze you
 Everyone makes mistakes, so do we. That's why you can easily modify all automatically created related posts. Simply navigate to the post that has incorrect related posts attached to it, edit it and your done.
 
 = WPML compatible =
-We love love WPML, that's why we made Related Posts for WordPress fully compatible with WMPL. You can automatically and manually link related posts in their own language.
-
+Related Posts for WordPress is fully compatible with WPML. You can automatically and manually link related posts in their own language.
 
 **More information**
 
@@ -48,10 +47,16 @@ We love love WPML, that's why we made Related Posts for WordPress fully compatib
 == Frequently Asked Questions ==
 
 = Where's the settings screen? =
-Nowhere, there's no settings screen.
+Settings > Related Posts.
+
+= Can the displaying of excerpt be disabled? =
+Yes, set the excerpt length to 0 in the Related Posts for WordPress settings screen.
 
 = Is there any way to custom CSS ? =
-Not yet via the plugin, this will be added in future versions. Elements do have classes so you can style them in your own/theme CSS.
+Yes, it's in the Related Posts for WordPress settings screen.
+
+= Can the automatically outputted CSS be disabled? =
+Yes, clear the CSS field in the Related Posts for WordPress settings screen.
 
 = Is there a theme function so I can output this list anywhere in my theme I want? =
 Not yet, we're working on this and this will be added soon!
@@ -68,12 +73,19 @@ There is one custom table created for the post cache, this table will however no
 
 == Changelog ==
 
-= 1.1.0 - August 11, 2014 =
-* Added option screen.
+= 1.2.0 : August 14, 2014 ==
+* Related Posts heading text is now a setting.
+* Amount of words in excerpt is now a setting.
+* Displaying images of related posts is now a setting.
+* Frontend CSS is now editable via settings.
+* Added 'rp4wp_heading' filter, allows filtering of complete related posts block heading.
+
+= 1.1.0 : August 11, 2014 =
+* Added settings screen.
 * Added to option to automatically link related posts on new posts, enabled by default.
 * Added 'rp4wp_ignored_words' filter.
 * Added 'rp4wp_thumbnail_size' filter.
 * Added missing ABSPATH checks.
 
-= 1.0.0 - August 7, 2014 =
+= 1.0.0 : August 7, 2014 =
 * Initial version
