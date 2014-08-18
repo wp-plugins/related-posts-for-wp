@@ -4,7 +4,7 @@ Donate link: http://www.barrykooij.com/
 Tags: related posts for wordpress, related posts for wp, simple related posts, easy related posts, related posts, related, relations, internal links, seo
 Requires at least: 3.6
 Tested up to: 3.9.2
-Stable tag: 1.2.2
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,7 +25,7 @@ We don't think having related posts should slow down your website. That's why Re
 After installing the plugin you will be taking to a wizard that will analyze your posts and link them to each other based on what we think is related. This means you can install Related Posts for WordPress on your website that has thousands of posts and create related connections on the fly, without any manual work!
 
 = Manually add, edit or remove =
-Everyone makes mistakes, so do we. That's why you can easily modify all automatically created related posts. Simply navigate to the post that has incorrect related posts attached to it, edit it and your done.
+Everyone makes mistakes, so do we. That's why you can easily modify all automatically created related posts. Simply navigate to the post that has incorrect related posts attached to it, edit it and you're done.
 
 = WPML compatible =
 Related Posts for WordPress is fully compatible with WPML. You can automatically and manually link related posts in their own language.
@@ -61,6 +61,9 @@ Yes, clear the CSS field in the Related Posts for WordPress settings screen.
 = Is there a theme function so I can output this list anywhere in my theme I want? =
 Not yet, we're working on this and this will be added soon!
 
+= Is there a shortcode? =
+Yes, use [rp4wp]
+
 = Does the plugin uses it's own database table ? =
 There is one custom table created for the post cache, this table will however not be used at the frontend of your website. Related Posts are fetched with normal WP_Query objects.
 
@@ -72,6 +75,13 @@ There is one custom table created for the post cache, this table will however no
 5. Related posts are automatically added below your posts!
 
 == Changelog ==
+
+= 1.3.0 : August 18, 2014 =
+* Added 'rp4wp_children' template function.
+* Added shortcode [rp4wp]
+* Added pot translation template file.
+* Added Dutch translation.
+* Added review request admin notice.
 
 = 1.2.2 : August 16, 2014 =
 * Solved a conflict with the NextGen plugin (apply_filters recursion on same filter kills underlying call).
