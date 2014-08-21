@@ -35,7 +35,7 @@ class RP4WP_Settings {
 			self::PREFIX . 'automatic_linking' => array(
 				'id'          => 'automatic_linking',
 				'label'       => __( 'Automatic post linking', 'related-posts-for-wp' ),
-				'description' => __( 'This section contains automatic post link related settings.', 'related-posts-for-wp' ),
+				'description' => __( 'The following options affect how related posts are automatically linked.', 'related-posts-for-wp' ),
 				'fields'      => array(
 					array(
 						'id'          => 'automatic_linking',
@@ -53,38 +53,51 @@ class RP4WP_Settings {
 					)
 				) ),
 			self::PREFIX . 'css' => array(
-				'id'          => 'css',
-				'label'       => __( 'Frontend Settings', 'related-posts-for-wp' ),
-				'description' => __( 'This section contains frontend related settings.', 'related-posts-for-wp' ),
+			'id'          => 'css',
+			'label'       => __( 'Frontend Settings', 'related-posts-for-wp' ),
+			'description' => __( 'The following options affect how related posts are displayed on the frontend.', 'related-posts-for-wp' ),
+			'fields'      => array(
+				array(
+					'id'          => 'heading_text',
+					'label'       => __( 'Heading text', 'related-posts-for-wp' ),
+					'description' => __( 'The text that is displayed above the related posts. To disable, leave field empty.', 'related-posts-for-wp' ),
+					'type'        => 'text',
+					'default'     => 'Related Posts',
+				),
+				array(
+					'id'          => 'excerpt_length',
+					'label'       => __( 'Excerpt length', 'related-posts-for-wp' ),
+					'description' => __( 'The amount of words to be displayed below the title on website. To disable, set value to 0.', 'related-posts-for-wp' ),
+					'type'        => 'text',
+					'default'     => '15',
+				),
+				array(
+					'id'          => 'display_image',
+					'label'       => __( 'Display Image', 'related-posts-for-wp' ),
+					'description' => __( 'Checking this will enable displaying featured images of related posts.', 'related-posts-for-wp' ),
+					'type'        => 'checkbox',
+					'default'     => 0,
+				),
+				array(
+					'id'          => 'css',
+					'label'       => __( 'CSS', 'related-posts-for-wp' ),
+					'description' => __( 'Warning! This is an advanced feature! An error here will break frontend display. To disable, leave field empty.', 'related-posts-for-wp' ),
+					'type'        => 'textarea',
+					'default'     => implode(PHP_EOL, $css_default_lines),
+				)
+			) ),
+			self::PREFIX . 'misc' => array(
+				'id'          => 'misc',
+				'label'       => __( 'Miscellaneous Settings', 'related-posts-for-wp' ),
+				'description' => __( "A shelter for options that just don't fit in.", 'related-posts-for-wp' ),
 				'fields'      => array(
 					array(
-						'id'          => 'heading_text',
-						'label'       => __( 'Heading text', 'related-posts-for-wp' ),
-						'description' => __( 'The text that is displayed above the related posts. To disable, leave field empty.', 'related-posts-for-wp' ),
-						'type'        => 'text',
-						'default'     => 'Related Posts',
-					),
-					array(
-						'id'          => 'excerpt_length',
-						'label'       => __( 'Excerpt length', 'related-posts-for-wp' ),
-						'description' => __( 'The amount of words to be displayed below the title on website. To disable, set value to 0.', 'related-posts-for-wp' ),
-						'type'        => 'text',
-						'default'     => '15',
-					),
-					array(
-						'id'          => 'display_image',
-						'label'       => __( 'Display Image', 'related-posts-for-wp' ),
-						'description' => __( 'Checking this will enable displaying featured images of related posts.', 'related-posts-for-wp' ),
+						'id'          => 'clean_on_uninstall',
+						'label'       => __( 'Remove Data on Uninstall?', 'related-posts-for-wp' ),
+						'description' => __( 'Check this box if you would like to completely remove all of its data when the plugin is deleted.', 'related-posts-for-wp' ),
 						'type'        => 'checkbox',
 						'default'     => 0,
 					),
-					array(
-						'id'          => 'css',
-						'label'       => __( 'CSS', 'related-posts-for-wp' ),
-						'description' => __( 'Warning! This is an advanced feature! An error here will break frontend display. To disable, leave field empty.', 'related-posts-for-wp' ),
-						'type'        => 'textarea',
-						'default'     => implode(PHP_EOL, $css_default_lines),
-					)
 				) )
 		);
 
