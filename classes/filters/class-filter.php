@@ -13,10 +13,6 @@ abstract class RP4WP_Filter {
 	 * Construct method. Set tag and register hook.
 	 *
 	 * @access public
-	 *
-	 * @param mixed $tag (default: null)
-	 *
-	 * @return void
 	 */
 	public function __construct() {
 		$this->register();
@@ -36,5 +32,34 @@ abstract class RP4WP_Filter {
 
 		add_filter( $this->tag, array( $this, 'run' ), $this->priority, $this->args );
 	}
+
+	/**
+	 * Get the args
+	 *
+	 * @return int
+	 */
+	public function get_args() {
+		return $this->args;
+	}
+
+	/**
+	 * Get the priority
+	 *
+	 * @return int
+	 */
+	public function get_priority() {
+		return $this->priority;
+	}
+
+	/**
+	 * Get the tag
+	 *
+	 * @return string
+	 */
+	public function get_tag() {
+		return $this->tag;
+	}
+
+
 
 }
