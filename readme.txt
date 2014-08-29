@@ -32,6 +32,7 @@ Related Posts for WordPress is fully compatible with WPML. You can automatically
 
 **More information**
 
+- Visit the [Related Posts for WordPress website](http://www.relatedpostsforwp.com/)
 - Other [WordPress plugins](http://profiles.wordpress.org/barrykooij/) by [Barry Kooij](http://www.barrykooij.com/)
 - Contact Barry on Twitter: [@CageNL](http://twitter.com/CageNL)
 - If you're a dev, follow or contribute to the [Related Posts for WordPress plugin on GitHub](https://github.com/barrykooij/related-posts-for-wp)
