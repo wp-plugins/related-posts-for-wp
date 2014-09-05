@@ -4,7 +4,7 @@ Donate link: http://www.relatedpostsforwp.com/
 Tags: related posts for wordpress, related posts for wp, simple related posts, easy related posts, related posts, related, relations, internal links, seo, bounce rate
 Requires at least: 3.6
 Tested up to: 4.0
-Stable tag: 1.4.1
+Stable tag: 1.5.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,9 @@ Everyone makes mistakes, so do we. That's why you can easily modify all automati
 
 = WPML compatible =
 Related Posts for WordPress is fully compatible with WPML. You can automatically add manually link related posts in their own language.
+
+= Shortcode =
+Related Posts for WordPress has a shortcode allowing you to display related posts on any position within your content.
 
 **More information**
 
@@ -78,6 +81,14 @@ There is one custom table created for the post cache, this table will however no
 5. Related posts are automatically added below your posts!
 
 == Changelog ==
+
+= 1.5.0 =
+* Added Related Posts widget.
+* Changed 'Delete Post' label to 'Unlink Related Post'.
+* Lowered amount of posts cached per request to increase feedback in wizard.
+* Various small wizard tweaks.
+* Added nonce check to wizard restart procedure.
+* Fixed a plugin activation redirect bug.
 
 = 1.4.1: August 29, 2014 =
 * Added filter 'rp4wp_append_content' to allow disabling of related post append to content.

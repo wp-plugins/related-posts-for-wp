@@ -44,11 +44,11 @@ jQuery(document).ready(function ($) {
 					// Do request
 					instance.do_request();
 
-				} else if( 'done' == response ) {
+				} else if ('done' == response) {
 					// Done
 					instance.done();
-				}else {
-					alert( "Woops! Something went wrong while linking.\n\nResponse:\n\n" + response );
+				} else {
+					alert("Woops! Something went wrong while linking.\n\nResponse:\n\n" + response);
 				}
 
 			});
@@ -78,7 +78,7 @@ jQuery(document).ready(function ($) {
 			// Set the correct action
 			switch (this.step) {
 				case 1:
-					this.ppr = 200;
+					this.ppr = 100;
 					this.action = 'rp4wp_install_save_words';
 					break;
 				case 2:
