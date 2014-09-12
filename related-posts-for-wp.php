@@ -3,7 +3,7 @@
 	Plugin Name: Related Posts for WordPress
 	Plugin URI: http://www.relatedpostsforwp.com/
 	Description: Related Posts for WordPress, the best way to display related posts in WordPress.
-	Version: 1.6.0
+	Version: 1.6.1
 	Author: Barry Kooij
 	Author URI: http://www.barrykooij.com/
 	License: GPL v3
@@ -26,7 +26,7 @@ class RP4WP {
 
 	private static $instance = null;
 
-	const VERSION = '1.6.0';
+	const VERSION = '1.6.1';
 
 	/**
 	 * @var RP4WP_Settings
@@ -104,7 +104,7 @@ class RP4WP {
 		load_plugin_textdomain( 'related-posts-for-wp', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 		// Check if we need to run the installer
-		if ( get_site_option( RP4WP_Constants::OPTION_DO_INSTALL, false ) ) {
+		if ( is_admin() && get_site_option( RP4WP_Constants::OPTION_DO_INSTALL, false ) ) {
 
 			// Delete do install site option
 			delete_site_option( RP4WP_Constants::OPTION_DO_INSTALL );
@@ -114,9 +114,11 @@ class RP4WP {
 			exit;
 		}
 
-		// Check if we need to display an 'is installing' notice
-		$is_installing_notice = new RP4WP_Is_Installing_Notice();
-		$is_installing_notice->check();
+		if ( is_admin() ) {
+			// Check if we need to display an 'is installing' notice
+			$is_installing_notice = new RP4WP_Is_Installing_Notice();
+			$is_installing_notice->check();
+		}
 
 		// Setup settings
 		$this->settings = new RP4WP_Settings();
