@@ -4,7 +4,7 @@ Donate link: http://www.relatedpostsforwp.com/
 Tags: related posts for wordpress, related posts for wp, simple related posts, easy related posts, related posts, related, relations, internal links, seo, bounce rate
 Requires at least: 3.6
 Tested up to: 4.0
-Stable tag: 1.5.0
+Stable tag: 1.6.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,9 @@ Related Posts for WordPress is fully compatible with WPML. You can automatically
 
 = Shortcode =
 Related Posts for WordPress has a shortcode allowing you to display related posts on any position within your content.
+
+= Widget =
+Related Posts for Wordpress has a widget allowing you to display related posts in any sidebar you'd like.
 
 **More information**
 
@@ -70,6 +73,9 @@ Not yet, we're working on this and this will be added soon!
 = Is there a shortcode? =
 Yes, use [rp4wp]
 
+= Is there a widget? =
+Yes there is!
+
 = Does Related Posts for WordPress uses it's own database table ? =
 There is one custom table created for the post cache, this table will however not be used at the frontend of your website. Related Posts are fetched with normal WP_Query objects.
 
@@ -81,6 +87,14 @@ There is one custom table created for the post cache, this table will however no
 5. Related posts are automatically added below your posts!
 
 == Changelog ==
+
+= 1.6.0: September 12, 2014 =
+* We're now replacing 'special' characters with their 'normal' equivalent.
+* Save the wizard settings to options to improve defaults.
+* Added a percentage to the progressbar to improve progress clarity.
+* The wizard progress is now updated when returned to wizard.
+* Various caching tweaks.
+* Added utf8 charset to cache database table in installer.
 
 = 1.5.0: September 5, 2014 =
 * Added Related Posts widget.
@@ -146,4 +160,4 @@ There is one custom table created for the post cache, this table will however no
 * Initial version
 
 == Upgrade Notice ==
-This version is safe to upgrade.
+This version is safe to upgrade. If all of your related posts are linked automatically, we do recommend rerunning the wizard for better results.
