@@ -8,7 +8,7 @@ class RP4WP {
 
 	private static $instance = null;
 
-	const VERSION = '1.6.2';
+	const VERSION = '1.6.3';
 
 	/**
 	 * @var RP4WP_Settings
@@ -49,22 +49,6 @@ class RP4WP {
 		require_once( plugin_dir_path( self::get_plugin_file() ) . '/classes/class-autoloader.php' );
 		$autoloader = new RP4WP_Autoloader( plugin_dir_path( self::get_plugin_file() ) . 'classes/' );
 		spl_autoload_register( array( $autoloader, 'load' ) );
-	}
-
-	/**
-	 * This method runs on plugin activation
-	 */
-	public static function activation() {
-
-		// Setup autoloader
-		self::setup_autoloader();
-
-		// Run the installer
-		$installer = new RP4WP_Installer();
-		$installer->install();
-
-		// Redirect to installation wizard
-		add_site_option( RP4WP_Constants::OPTION_DO_INSTALL, true );
 	}
 
 	/**
