@@ -21,10 +21,10 @@ Our installation wizard will do all the hard work for you, simply activate the p
 > #### Related Posts for WordPress Premium
 > There's an even better version of this plugin that comes with the following extra features:<br />
 >
-> Custom Post Type Support<br />
-> Related Post Themes<br />
-> Custom Taxonomy Support<br />
-> Priority Email Support<br />
+> - Custom Post Type Support<br />
+> - Related Post Themes<br />
+> - Custom Taxonomy Support<br />
+> - Priority Email Support<br />
 >
 > [More information](https://www.relatedpostsforwp.com/features/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=after-features-info-link) | [Purchase >>](https://www.relatedpostsforwp.com/checkout/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=after-features-purchase-link)
 
