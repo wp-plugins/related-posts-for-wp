@@ -4,7 +4,7 @@ Donate link: http://www.relatedpostsforwp.com/
 Tags: related posts for wordpress, related posts for wp, simple related posts, easy related posts, related posts, related, relations, internal links, seo, bounce rate
 Requires at least: 3.6
 Tested up to: 4.0
-Stable tag: 1.6.3
+Stable tag: 1.7.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,6 +17,16 @@ Display related posts without slowing down your website! Link all your existing 
 Related Posts for WordPress offers you the ability to link related posts to each other with just 1 click!
 
 Our installation wizard will do all the hard work for you, simply activate the plugin, set the amount of posts that should relate and press the button. Related Posts for WordPress will do the rest. Relating posts in WordPress has never been this easy!
+
+> #### Related Posts for WordPress Premium
+> There's an even better version of this plugin that comes with the following extra features:<br />
+>
+> Custom Post Type Support<br />
+> Related Post Themes<br />
+> Custom Taxonomy Support<br />
+> Priority Email Support<br />
+>
+> [More information](https://www.relatedpostsforwp.com/features/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=after-features-info-link) | [Purchase >>](https://www.relatedpostsforwp.com/checkout/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=after-features-purchase-link)
 
 = Related Posts for WordPress won't lag your server! =
 We don't think having related posts should slow down your website. That's why Related Posts for WordPress creates its own cache and does all the heavy lifting in the admin panel, keeping your website fast as it should be!
