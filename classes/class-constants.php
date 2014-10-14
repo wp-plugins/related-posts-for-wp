@@ -10,6 +10,7 @@ abstract class RP4WP_Constants {
 	const LINK_PT = 'rp4wp_link';
 
 	// Linked meta
+	const PM_PT_PARENT = 'rp4wp_pt_parent';
 	const PM_PARENT = 'rp4wp_parent';
 	const PM_CHILD = 'rp4wp_child';
 
@@ -26,6 +27,6 @@ abstract class RP4WP_Constants {
 	const OPTION_ADMIN_NOTICE_KEY = 'rp4wp_hide_nag';
 
 	// Nonce
-	const NONCE_REINSTALL = 'rp4wp-reinstall-secret';
+	const NONCE_INSTALL = 'rp4wp-install-secret';
 
 }
