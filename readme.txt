@@ -4,7 +4,7 @@ Donate link: http://www.relatedpostsforwp.com/
 Tags: related posts for wordpress, related posts for wp, simple related posts, easy related posts, related posts, related, relations, internal links, seo, bounce rate
 Requires at least: 3.6
 Tested up to: 4.0
-Stable tag: 1.7.0
+Stable tag: 1.7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,7 +98,10 @@ There is one custom table created for the post cache, this table will however no
 
 == Changelog ==
 
-= 1.7.0 =
+= 1.7.1: October 17, 2014 =
+* Fixed a bug with manually creating links.
+
+= 1.7.0: October 14, 2014 =
 * Major performance improvements for post link creation.
 * Fixed a shortcode bug.
 * Changed NONCE_REINSTALL constant to NONCE_INSTALL.
