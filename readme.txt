@@ -86,7 +86,8 @@ Yes, it's in the Related Posts for WordPress settings screen.
 Yes, clear the CSS field in the Related Posts for WordPress settings screen.
 
 = Is there a theme function so I can output this list anywhere in my theme I want? =
-Yes, you can use `rp4wp_children();`. [More information on the theme function can be found here](https://www.relatedpostsforwp.com/documentation/theme-functions-to-display-related-posts/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=faq-item).
+Yes, you can use `rp4wp_children();`.
+[More information on the theme function can be found here](https://www.relatedpostsforwp.com/documentation/theme-functions-to-display-related-posts/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=faq-item).
 
 = Is there a shortcode? =
 Yes. To display your related posts via a shortcode use: [rp4wp]
