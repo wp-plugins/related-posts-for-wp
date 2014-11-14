@@ -24,6 +24,7 @@ Our installation wizard will do all the hard work for you, simply activate the p
 > - Custom Post Type Support<br />
 > - Related Post Themes<br />
 > - Custom Taxonomy Support<br />
+> - WordPress Network / Multisite support<br />
 > - Priority Email Support<br />
 >
 > [More information](https://www.relatedpostsforwp.com/features/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=after-features-info-link) | [Purchase >>](https://www.relatedpostsforwp.com/checkout/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=after-features-purchase-link)
@@ -69,6 +70,7 @@ Related Posts for Wordpress has a widget allowing you to display related posts i
 > - Custom Post Type Support<br />
 > - Related Post Themes<br />
 > - Custom Taxonomy Support<br />
+> - WordPress Network / Multisite support<br />
 > - Priority Email Support<br />
 >
 > [More information](https://www.relatedpostsforwp.com/features/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=faq-info-link) | [Purchase >>](https://www.relatedpostsforwp.com/checkout/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=faq-purchase-link)
@@ -95,7 +97,10 @@ Yes. To display your related posts via a shortcode use: [rp4wp]
 = Is there a widget? =
 Yes there is!
 
-= Does Related Posts for WordPress uses it's own database table ? =
+= Does Related Posts for WordPress supports WordPress Network / Multisite websites? =
+No, the free version does not. [The premium version however does, get it here](https://www.relatedpostsforwp.com/checkout/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=faq-item).
+
+= Does Related Posts for WordPress uses it's own database table? =
 There is one custom table created for the post cache, this table will however not be used at the frontend of your website. Related Posts are fetched with normal WP_Query objects.
 
 == Screenshots ==
@@ -106,6 +111,9 @@ There is one custom table created for the post cache, this table will however no
 5. Related posts are automatically added below your posts!
 
 == Changelog ==
+
+= Trunk: November xx, 2014 =
+* Fixed a hardcoded database table bug.
 
 = 1.7.4: November 12, 2014 =
 * Fixed an UTF-8 - iconv bug.
