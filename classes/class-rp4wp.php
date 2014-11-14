@@ -8,7 +8,7 @@ class RP4WP {
 
 	private static $instance = null;
 
-	const VERSION = '1.7.4';
+	const VERSION = '1.7.5';
 
 	/**
 	 * @var RP4WP_Settings
@@ -68,6 +68,13 @@ class RP4WP {
 
 		// Load plugin text domain
 		load_plugin_textdomain( 'related-posts-for-wp', false, dirname( plugin_basename( RP4WP_PLUGIN_FILE ) ) . '/languages/' );
+
+		// Check for multisite, we don't support that
+		if ( is_multisite() && ( is_admin() || is_network_admin() ) ) {
+			add_action( 'admin_notices', array( 'RP4WP_Multisite_Notice', 'display' ) );
+			add_action( 'network_admin_notices', array( 'RP4WP_Multisite_Notice', 'display' ) );
+			return;
+		}
 
 		// Check if we need to run the installer
 		if ( is_admin() && get_option( RP4WP_Constants::OPTION_DO_INSTALL, false ) ) {
