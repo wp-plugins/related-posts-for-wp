@@ -3,7 +3,7 @@
 	Plugin Name: Related Posts for WordPress
 	Plugin URI: http://www.relatedpostsforwp.com/
 	Description: Related Posts for WordPress, the best way to display related posts in WordPress.
-	Version: 1.8.2
+	Version: 1.9.0
 	Author: Barry Kooij
 	Author URI: http://www.barrykooij.com/
 	License: GPL v3
@@ -36,10 +36,11 @@ function rp4wp_load_plugin() {
 	// Define
 	define( 'RP4WP_PLUGIN_FILE', __FILE__ );
 
-	// Load main plugin file
-	require_once plugin_dir_path( RP4WP_PLUGIN_FILE ) . 'classes/class-rp4wp.php';
-	RP4WP();
+	require dirname( __FILE__ ) . '/vendor/autoload_52.php';
+	require dirname( __FILE__ ) . '/includes/functions.php';
 
+	// Instantiate main plugin object
+	RP4WP();
 }
 
 // Create object - Plugin init
