@@ -159,7 +159,7 @@ class RP4WP_Post_Link_Manager {
 	 *
 	 * @return array
 	 */
-	public function get_children( $parent_id, $extra_args = null ) {
+	public function get_children( $parent_id, $extra_args = array() ) {
 		global $post;
 
 		// Store current post
@@ -188,6 +188,11 @@ class RP4WP_Post_Link_Manager {
 			unset( $extra_args['order'] );
 		}
 
+		/**
+		 * Filter args for link query
+		 */
+		$link_args = apply_filters( 'rp4wp_get_children_link_args', $link_args, $parent_id );
+
 		// Create link query
 		$link_query = new WP_Query( $link_args );
 
@@ -199,7 +204,7 @@ class RP4WP_Post_Link_Manager {
 		endwhile;
 
 		// Get children with custom args
-		if ( $extra_args !== null && count( $extra_args ) > 0 ) {
+		if ( is_array( $extra_args ) && count( $extra_args ) > 0 ) {
 
 			if ( ! isset( $extra_args['orderby'] ) ) {
 				$this->temp_child_order = array();
@@ -223,6 +228,11 @@ class RP4WP_Post_Link_Manager {
 
 				// Extra arguments
 				$child_args = array_merge_recursive( $child_args, $extra_args );
+
+				/**
+				 * Filter args for child query
+				 */
+				$child_args = apply_filters( 'rp4wp_get_children_child_args', $child_args, $parent_id );
 
 				// Child Query
 				$child_query = new WP_Query( $child_args );
@@ -333,20 +343,21 @@ class RP4WP_Post_Link_Manager {
 	/**
 	 * Generate the children list
 	 *
-	 * @param $id
+	 * @param int $id
+	 * @param int $limit
 	 *
 	 * @since  1.0.0
 	 * @access public
 	 *
 	 * @return string
 	 */
-	public function generate_children_list( $id ) {
+	public function generate_children_list( $id, $limit = -1 ) {
 
 		// The content
 		$content = '';
 
 		// Get the children
-		$related_posts = $this->get_children( $id );
+		$related_posts = $this->get_children( $id, array( 'posts_per_page' => $limit ) );
 
 		// Count
 		if ( count( $related_posts ) > 0 ) {
@@ -402,7 +413,7 @@ class RP4WP_Post_Link_Manager {
 
 				$excerpt_length = RP4WP::get()->settings->get_option( 'excerpt_length' );
 				if ( $excerpt_length > 0 ) {
-					$excerpt = strip_shortcodes( ( ( '' != $rp4wp_post->post_excerpt ) ? $rp4wp_post->post_excerpt : wp_trim_words( $rp4wp_post->post_content, $excerpt_length ) ) );
+					$excerpt = wp_trim_words( strip_tags( strip_shortcodes( ( ( '' != $rp4wp_post->post_excerpt ) ? $rp4wp_post->post_excerpt : $rp4wp_post->post_content ) ) ), $excerpt_length );
 					$content .= "<p>" . apply_filters( 'rp4wp_post_excerpt', $excerpt, $rp4wp_post->ID ) . "</p>";
 				}
 

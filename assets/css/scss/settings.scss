@@ -3,6 +3,14 @@
   float: left;
   box-sizing: border-box;
 
+  .rp4wp-settings-section {
+    display: none;
+  }
+
+  #rp4wp-settings-general {
+    display: block;
+  }
+
   input.rp4wp-input-text {
     width: 100%;
   }
@@ -37,10 +45,11 @@
   .rp4wp-box {
     margin-bottom: 20px;
 
-    .rp4wp-sidebar-header {
-      line-height: 0;
-      border-bottom: 2px solid #005592;
+    h3.rp4wp-title {
+      padding-bottom: 5px;
+      border-bottom: 1px solid #ccc;
     }
+
   }
 
   .rp4wp-box-upgrade {
@@ -58,10 +67,14 @@
       margin: 0;
     }
 
-	a {
-	  color: #2ea2cc;
-	  font-weight: bold;
-	}
+    ul {
+      list-style: square;
+      margin-left: 20px;
+    }
+
+    a.button-primary {
+      font-weight: bold;
+    }
   }
 
 }
